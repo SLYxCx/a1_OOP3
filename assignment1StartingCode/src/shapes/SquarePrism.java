@@ -3,6 +3,8 @@ package shapes;
 public class SquarePrism extends Prism
 {
 
+
+
     public SquarePrism(double side, double height) {
         this.side = side;
         this.height = height;
@@ -31,12 +33,24 @@ public class SquarePrism extends Prism
 
     @Override
     public int compare(Prism p1, Prism p2) {
-        if (p1.calcVolume() < p2.calcVolume()) {
-            return -1;
-        } else if (p1.calcVolume() > p2.calcVolume()) {
-            return 1;
+        if (compareByVolume) {
+            // Compare by volume
+            if (p1.calcVolume() < p2.calcVolume()) {
+                return -1;
+            } else if (p1.calcVolume() > p2.calcVolume()) {
+                return 1;
+            } else {
+                return 0;
+            }
         } else {
-            return 0;
+            // Compare by base area
+            if (p1.calcBaseArea() < p2.calcBaseArea()) {
+                return -1;
+            } else if (p1.calcBaseArea() > p2.calcBaseArea()) {
+                return 1;
+            } else {
+                return 0;
+            }
         }
     }
 

@@ -6,6 +6,8 @@ abstract public class Prism implements Comparable<Prism>, Comparator<Prism> {
 
     double height;
     double side;
+    boolean compareByVolume; //boolean to determine comparison type
+
 
     abstract public double calcVolume();
 
