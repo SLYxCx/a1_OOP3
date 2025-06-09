@@ -19,4 +19,25 @@ public class PentagonalPrism extends Prism
         return (5 * Math.pow(side, 2) * Math.sqrt(5 + 2 * Math.sqrt(5))) / 4;
     }
 
+    @Override
+    public int compareTo(Prism other) {
+        if (this.height < other.height) {
+            return -1;
+        } else if (this.height > other.height) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
+    @Override
+    public int compare(Prism p1, Prism p2) {
+        if (p1.calcVolume() < p2.calcVolume()) {
+            return -1;
+        } else if (p1.calcVolume() > p2.calcVolume()) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
 }

@@ -1,6 +1,8 @@
 package shapes;
 
-abstract public class Prism {
+import java.util.Comparator;
+
+abstract public class Prism implements Comparable<Prism>, Comparator<Prism> {
 
     double height;
     double side;

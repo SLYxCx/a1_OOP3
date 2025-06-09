@@ -22,4 +22,25 @@ public class TriangularPrism extends Prism
         return 0.5 * base * height;
     }
 
+    @Override
+    public int compareTo(Prism other) {
+        if (this.height < other.height) {
+            return -1;
+        } else if (this.height > other.height) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
+    @Override
+    public int compare(Prism p1, Prism p2) {
+        if (p1.calcVolume() < p2.calcVolume()) {
+            return -1;
+        } else if (p1.calcVolume() > p2.calcVolume()) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
 }
