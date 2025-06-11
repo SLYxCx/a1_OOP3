@@ -2,15 +2,12 @@ package shapes;
 
 import java.util.Comparator;
 
-abstract public class Prism implements Comparable<Prism>, Comparator<Prism> {
+abstract public class Prism extends Shape implements Comparable<Prism>, Comparator<Prism> {
 
     double height;
     double side;
-    boolean compareByVolume; //boolean to determine comparison type
-
+    boolean compareByVolume;
 
     abstract public double calcVolume();
-
     abstract public double calcBaseArea();
-    
 }
