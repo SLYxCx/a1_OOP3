@@ -8,7 +8,17 @@ javac -d . Sort.java shapes/Shape.java shapes/Prism.java shapes/SquarePrism.java
 jar cfe Sort.jar Sort *.class shapes/*.class sorting/*.class
 ```
 
-# 3. Test it
+# 3. choose command
+
+java -jar Sort.jar -ffile_name -tv -sb
+
+• -f or -F followed by file_name (the file name and path) with no spaces
+
+• -t or -T followed by v (volume), h (height) or a (base area) with no spaces
+
+• -s or -S followed by b (bubble), s (selection), i (insertion), m (merge), q (quick) or z (your choice of sorting algorithm) with no spaces
+
+# 4. Test it
 ``` 
-java -jar Sort.jar -f"\..\res\shapes5.txt" -tv -sq
+java -jar Sort.jar -f"\path\to\file.txt" -tv -sq
 ``` 
