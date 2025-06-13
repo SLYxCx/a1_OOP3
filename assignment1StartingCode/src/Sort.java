@@ -228,16 +228,19 @@ public class Sort {
         // Display results
         System.out.println("\nSorted Results:");
         
+                // Display results
+        System.out.println("\nSorted Results:");
+        
         // Display first element
-        System.out.printf("First element: %.4f%n", valueArray[0]);
+        System.out.printf("First element: %s   %s   %.4f%n", prismArray[0].getClass().getSimpleName(), typeName, valueArray[0]);
         
         // Display every thousandth element
         for (int i = 999; i < valueArray.length; i += 1000) {
-            System.out.printf("Element %d: %.4f%n", i + 1, valueArray[i]);
+            System.out.printf("Element %d: %s   %s   %.4f%n", i + 1, prismArray[i].getClass().getSimpleName(), typeName, valueArray[i]);
         }
         
         // Display last element
-        System.out.printf("Last element: %.4f%n", valueArray[valueArray.length - 1]);
+        System.out.printf("Last element: %s   %s   %.4f%n ", prismArray[valueArray.length - 1].getClass().getSimpleName(), typeName ,valueArray[valueArray.length - 1]);
         
         System.out.println("\nTime taken: " + duration + " ms");
     }
