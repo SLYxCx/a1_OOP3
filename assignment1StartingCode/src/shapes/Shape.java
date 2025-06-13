@@ -2,11 +2,11 @@ package shapes;
 
 abstract public class Shape {
 
-    double height;
+    public double height;
     boolean compareByVolume; //boolean to determine comparison type
 
-    abstract double calcVolume();
+    abstract public double calcVolume();
 
-    abstract double calcBaseArea();
+    abstract public double calcBaseArea();
     
 }
