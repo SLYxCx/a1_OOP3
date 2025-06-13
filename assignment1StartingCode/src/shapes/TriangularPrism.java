@@ -4,23 +4,19 @@ public class TriangularPrism extends Prism
 {
 
 
-    private double base;
-    private double prismHeight;
-
-    public TriangularPrism(double base, double height, double prismHeight) {
-        this.base = base;
+    public TriangularPrism(double base, double height) {
+        this.side = base;
         this.height = height;
-        this.prismHeight = prismHeight;
     }
 
     @Override
     public double calcVolume() {
-        return (0.5 * base * height) * prismHeight;
+        return (0.5 * side * height) * height;
     }
 
     @Override
     public double calcBaseArea() {
-        return 0.5 * base * height;
+        return 0.5 * side * height;
     }
 
     @Override

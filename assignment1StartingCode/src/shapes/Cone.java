@@ -1,23 +1,56 @@
 package shapes;
 
-public class Cone extends Shape
+public class Cone extends Prism
 {
-    private double height;
-    private double radius;
+
 
     public Cone(double radius, double height) {
-        this.radius = radius;
+        this.side = radius;
         this.height = height;
     }
 
     @Override
     public double calcVolume() {
-        return (Math.PI * Math.pow(radius, 2) * height) / 3.0;
+        return (Math.PI * Math.pow(side, 2) * height) / 3.0;
     }
 
     @Override
     public double calcBaseArea() {
-        return Math.PI * Math.pow(radius, 2);
+        return Math.PI * Math.pow(side, 2);
+    }
+
+        @Override
+    public int compareTo(Prism other) {
+        if (this.height < other.height) {
+            return -1;
+        } else if (this.height > other.height) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
+ @Override
+    public int compare(Prism p1, Prism p2) {
+        if (compareByVolume) {
+            // Compare by volume
+            if (p1.calcVolume() < p2.calcVolume()) {
+                return -1;
+            } else if (p1.calcVolume() > p2.calcVolume()) {
+                return 1;
+            } else {
+                return 0;
+            }
+        } else {
+            // Compare by base area
+            if (p1.calcBaseArea() < p2.calcBaseArea()) {
+                return -1;
+            } else if (p1.calcBaseArea() > p2.calcBaseArea()) {
+                return 1;
+            } else {
+                return 0;
+            }
+        }
     }
 
 }
